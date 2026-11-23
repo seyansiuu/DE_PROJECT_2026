@@ -756,3 +756,4 @@ WHERE a.status = 'ACTIVE'
                 AND i.billing_period_start = '2026-06-01'
                 AND i.status = 'FAILED');
 ```
+:) 

@@ -3,6 +3,7 @@ BEGIN;
 SET LOCAL search_path = netflix, public;
 LOCK TABLE netflix.viewing_activity IN ACCESS EXCLUSIVE MODE;
 
+DO $$
 BEGIN
     IF to_regclass('netflix.viewing_activity_pre_cp4') IS NOT NULL
        OR to_regclass('netflix.viewing_activity_cp4_new') IS NOT NULL

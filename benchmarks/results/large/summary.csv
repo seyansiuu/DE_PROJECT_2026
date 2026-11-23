@@ -1,0 +1,19 @@
+query_id,type,original_avg_ms,partitioned_avg_ms,change_pct,scan_original,scan_partitioned,status
+R01,READ,0.402,2.455,510.45,Index Scan on viewing_activity,Partition index scan across monthly partitions,MEASURED
+R02,READ,0.466,0.158,-66.09,Index Scan on episodes,Index Scan on episodes,MEASURED
+R03,READ,18.668,15.552,-16.69,Range index scan,Monthly partition pruning,MEASURED
+R04,READ,7.969,6.971,-12.52,Bitmap and sequential scans,Bitmap and sequential scans,MEASURED
+R05,READ,21.153,16.171,-23.55,Sequential scan on titles,Sequential scan on titles,MEASURED
+R06,READ,0.156,0.142,-8.97,Index Scan on my_list,Index Scan on my_list,MEASURED
+R07,READ,0.137,0.125,-8.76,Composite episode index,Composite episode index,MEASURED
+R08,READ,64.332,41.940,-34.81,Started-at index and scan,Range scan across monthly partitions,MEASURED
+R09,READ,356.226,540.909,51.84,Sequential scan on viewing_activity,Sequential scans across all partitions,MEASURED
+R10,READ,0.220,0.177,-19.55,Expression index on accounts,Expression index on accounts,MEASURED
+R11,READ,70.871,75.324,6.28,Invoice bitmap plus account scan,Invoice bitmap plus account scan,MEASURED
+R12,READ,18.521,20.127,8.67,Bitmap scan on accounts,Bitmap scan on accounts,MEASURED
+R13,READ,0.243,0.102,-58.02,Episode index plus activity scan,Episode index plus all-partition activity scan,MEASURED
+R14,READ,332.509,583.579,75.49,Sequential scan on viewing_activity,Sequential scans across all partitions,MEASURED
+R15,READ,33.904,43.622,28.66,Sequential scans,Sequential scans,MEASURED
+R16,READ,1901.788,2214.867,16.46,Sequential scan on viewing_activity,Sequential scans across all partitions,MEASURED
+R17,READ,69.186,77.614,12.18,Sequential scans,Sequential scans,MEASURED
+R18,READ,268.988,221.304,-17.73,Sequential scan on viewing_activity,Partition-pruned sequential scans,MEASURED
